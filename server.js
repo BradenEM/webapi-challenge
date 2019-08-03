@@ -8,7 +8,7 @@ server.use(obscurity());
 server.use(logger);
 server.use(express.json());
 server.use("/api/projects", projectsRouter);
-// server.use("/api/actions", actionsRouter);
+server.use("/api/actions", actionsRouter);
 
 server.get("/", (req, res) => {
   res.send("<h1>Sprint Time</h1>");
